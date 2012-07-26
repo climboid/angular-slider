@@ -1,5 +1,5 @@
 angular.module('myApp', [])
-    .directive('markdown', function() {
+    .directive('slider', function() {
     return {
         restrict:'A',
         link:function(scope,element,attrs){
