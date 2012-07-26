@@ -4,10 +4,10 @@ angular.module('myApp', [])
         restrict:'A',
         link:function(scope,element,attrs){
            element.slider({
-                range: true,
+                orientation: "vertical",
                 min: 0,
                 max: 500,
-                values: [ 75, 300 ],
+                value: 75,
                 slide: function( event, ui ) {
 
                 }
