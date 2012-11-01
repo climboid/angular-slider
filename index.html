@@ -8,9 +8,13 @@
 <script src="script.js"></script>
 </head>
 
-<body>
+<body ng-controller="mainCtrl">
 	<div class="demo">
-		<div slider></div>
+		<div slider id="slider1"></div>
+		<input type="text" value="{{hello}}"/>
+		<div slider id="slider2"></div>
+		<input type="text" value="{{goodbye}}"/>
 	</div>
 </body>
+<script src="controller.js"></script>
 </html>
