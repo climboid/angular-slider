@@ -3,6 +3,9 @@ function mainCtrl($scope){
 	$scope.hello = "hello"; //first input text
 	$scope.goodbye = "goodbye"; //second input text
 
+    $scope.sliderValue1 = 175;
+    $scope.sliderValue2 = 75;
+
 }
 
 angular.module('myApp', [])
@@ -17,8 +20,10 @@ angular.module('myApp', [])
                 slide: function( event, ui ) {
                 		if(event.target.id =="slider1"){
                 			scope.hello = ui.value;	
+                            $("#slider2").slider({value:ui.value})
+                            scope.goodbye = ui.value;
                 		}else if(event.target.id == "slider2"){
-                			scope.goodbye = ui.value;
+                	       //stuff that second slider does
                 		}
                     
                     scope.$apply();
