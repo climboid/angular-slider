@@ -1,18 +1,22 @@
 <!doctype html>
 <html ng-app="myApp">
 <head>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script>
-<script type="text/javascript" src="angular.js"></script>
-<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/redmond/jquery-ui.css" rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="jqueryUITouchPunch.min.js"></script>
+<script src="angular.js"></script>
+<link type="text/css" href="styles.css" rel="stylesheet" />
 </head>
 
 <body ng-controller="mainCtrl">
-	<div class="demo">
-		<div slider id="slider1" max="100" min="20"></div>
+	<div class="sliderContainer">
+		<div slider id="slider1" max="100" min="20" style="width:330px"></div>
+		<div class="sliderLabelContainer">
+			<div class="min">Baseline</div>
+			<div class="mead">Value Imprv.</div>
+			<div class="max">Business Plan</div>
+		</div>
 		<input type="text" value="{{hello}}"/>
-		<div slider id="slider2" max="100" min="20"></div>
-		<input type="text" value="{{goodbye}}"/>
 	</div>
 </body>
 <script src="controller.js"></script>
