@@ -9,10 +9,12 @@ angular.module('myApp', [])
     return {
         restrict:'A',
         link:function(scope,element,attrs){
+           // undefined attrs on the element will use the jquery UI defaults	
            element.slider({
-                min: 1,
-                max: 3,
-                value: 2,
+                min: attrs.min,
+                max: attrs.max,
+                value: attrs.value,
+                step: attrs.step,
                 slide: function( event, ui ) {
                     if(ui.value == 3){
                         $(this).find('a').css('margin-left','-31%')
